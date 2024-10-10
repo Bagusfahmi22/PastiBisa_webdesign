@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabz Sewa Kamera</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #17bbd4;
+        }
+
+        header {
+            background-color: #671a11;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 10px 0;
+        }
+
+        p {
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .cta {
+            background-color: #792619;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .cta h4, .cta h5 {
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .camera-list, .lensa-list {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .camera, .lensa {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .camera img, .lensa img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+
+        .booking-form {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .booking-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .booking-form form label {
+            margin-bottom: 5px;
+        }
+
+        .booking-form form input {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gabz Sewa Kamera</h1>
+        <img src="C:/Users/BAGUS FAHMI/OneDrive/Pictures/Saved Pictures/IMG_8185.PNG" alt="Gabz Sewa Kamera">
+    </header>
+
+    <div class="container">
+        <p>Gabz Sewa Kamera adalah bisnis yang menyediakan layanan penyewaan kamera dan perlengkapan fotografi. Target utamanya adalah para fotografer, videografer, dan penggemar fotografi.</p>
+
+        <h2>Kami Menyediakan Penyewaan Berbagai Macam Kamera dan Lensa</h2>
+        <h3>Mirrorless - DSLR - Flash - Lensa Tele - Lensa Fix</h3>
+
+        <div class="cta">
+            <h4>Ayo Sewa Sekarang!</h4>
+            <h5>Pasti Termurah Se-Sidoarjo</h5>
+        </div>
+
+        <h6>Lokasi: Sidoarjo Kota</h6>
+
+        <!-- Section Kamera -->
+        <section class="camera-list">
+            <h2>Kamera yang Tersedia</h2>
+            <div class="camera" id="camera1">
+                <img src="https://megakamera.com/wp-content/uploads/2021/05/Canon-EOS-5D-Mark-IV-DSLR-Camera-Body-Only-1.jpg" alt="Canon EOS 5D">
+                <h3>Canon EOS 5D</h3>
+                <p>Harga: Rp 500,000/hari</p>
+                <button onclick="addToSelection('Canon EOS 5D', 500000)">Pilih</button>
+            </div>
+            <div class="camera" id="camera2">
+                <img src="https://i.pinimg.com/564x/22/1c/90/221c909c8741443dff930520af01ba79.jpg" alt="Sony a6400">
+                <h3>Sony a6400</h3>
+                <p>Harga: Rp 400,000/hari</p>
+                <button onclick="addToSelection('Sony a6400', 400000)">Pilih</button>
+            </div>
+            <div class="camera" id="camera3">
+                <img src="https://i.pinimg.com/474x/21/a8/07/21a807a59e5ca0f62feeedec410e5b67.jpg" alt="Sony A7 III">
+                <h3>Sony A7 III</h3>
+                <p>Harga: Rp 700,000/hari</p>
+                <button onclick="addToSelection('Sony A7 III', 700000)">Pilih</button>
+            </div>
+        </section>
+
+        <!-- Section Lensa -->
+        <section class="lensa-list">
+            <h2>Lensa yang Tersedia</h2>
+            <div class="lensa" id="lensa1">
+                <img src="https://i.pinimg.com/236x/26/d7/20/26d720a4653a9f7e62271ecb4fb5e012.jpg" alt="FE 70-200mm F2.8 GM OSS">
+                <h3>FE 70-200mm F2.8 GM OSS</h3>
+                <p>Harga: Rp 300,000/hari</p>
+                <button onclick="addToSelection('FE 70-200mm F2.8 GM OSS', 300000)">Pilih</button>
+            </div>
+            <div class="lensa" id="lensa2">
+                <img src="https://i.pinimg.com/236x/dc/8a/0a/dc8a0a634d1aa192cdef0e925ae130d6.jpg" alt="FE 50mm 1.8">
+                <h3>FE 50mm 1.8</h3>
+                <p>Harga: Rp 200,000/hari</p>
+                <button onclick="addToSelection('FE 50mm 1.8', 200000)">Pilih</button>
+            </div>
+            <div class="lensa" id="lensa3">
+                <img src="https://i.pinimg.com/736x/31/e5/1e/31e51e6178d69a69ff86d4433fa78b1d.jpg" alt="Canon EF 70-200mm F4.0 L USM">
+                <h3>Canon EF 70-200mm F4.0 L USM</h3>
+                <p>Harga: Rp 350,000/hari</p>
+                <button onclick="addToSelection('Canon EF 70-200mm F4.0 L USM', 350000)">Pilih</button>
+            </div>
+        </section>
+
+        <!-- Form Pemesanan -->
+        <section class="booking-form">
+            <h2>Pesan Kamera</h2>
+            <form id="form-pemesanan">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" required>
+                
+                <label for="kamera1">Kamera 1:</label>
+                <input type="text" id="kamera1" readonly required>
+
+                <label for="kamera2">Kamera 2:</label>
+                <input type="text" id="kamera2" readonly>
+
+                <label for="harga1">Harga Kamera 1 per Hari:</label>
+                <input type="text" id="harga1" readonly required>
+
+                <label for="harga2">Harga Kamera 2 per Hari:</label>
+                <input type="text" id="harga2" readonly>
+
+                <label for="hari">Lama Sewa (hari):</label>
+                <input type="number" id="hari" required>
+
+                <button type="submit">Pesan Sekarang</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Gabz Sewa Kamera. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        let selectedCameras = [];
+
+        function addToSelection(kamera, harga) {
+            if (selectedCameras.length < 2) {
+                selectedCameras.push({ kamera, harga });
+                updateForm();
+            } else {
+                alert('Anda hanya bisa memilih maksimal 2 kamera.');
+            }
+        }
+
+        function updateForm() {
+            if (selectedCameras[0]) {
+                document.getElementById('kamera1').value = selectedCameras[0].kamera;
+                document.getElementById('harga1').value = Rp ${selectedCameras[0].harga.toLocaleString('id-ID')}/hari;
+            }
+            if (selectedCameras[1]) {
+                document.getElementById('kamera2').value = selectedCameras[1].kamera;
+                document.getElementById('harga2').value = Rp ${selectedCameras[1].harga.toLocaleString('id-ID')}/hari;
+            }
+        }
+    </script>
+</body>
+</html
